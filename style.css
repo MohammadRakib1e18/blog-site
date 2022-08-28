@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-image: linear-gradient(135deg, rgb(2, 5, 39), rgb(1, 1, 19));
+}
+img{
+    width: 50px;
+    border: 2px solid rgb(96, 96, 99);
+    background-color: rgb(4, 2, 36);
+    border-radius: 50%;
+}
