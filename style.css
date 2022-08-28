@@ -1,15 +1,40 @@
-body{
+body {
     margin: 0;
     border: 0;
     padding: 0;
     box-sizing: border-box;
 }
-nav{
-    background-image: linear-gradient(135deg, rgb(2, 5, 39), rgb(1, 1, 19));
+nav {
+    background-image: linear-gradient(
+        135deg,
+        rgb(0, 0, 0),
+        rgba(28, 36, 85, 0.89),
+        rgb(0, 0, 0)
+    );
 }
-img{
+nav img {
     width: 50px;
     border: 2px solid rgb(96, 96, 99);
     background-color: rgb(4, 2, 36);
     border-radius: 50%;
+}
+.recent-header {
+    color: #262626;
+}
+
+main{
+    width: 90%;
+    background-color: gainsboro;
+}
+
+.post-bar{
+    width: 75%;
+    border-right: 2px solid gray;
+}
+.side-bar{
+    width: 25%;
+}
+
+.read-more-icons{
+    margin-bottom: 3px;
 }
