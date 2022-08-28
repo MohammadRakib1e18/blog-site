@@ -54,7 +54,7 @@ article img {
     margin-bottom: 3px;
 }
 
-.catagories li {
+.catagories li, .popular-single-post{
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(44, 43, 43, 0.164);
@@ -68,3 +68,21 @@ article img {
     border-radius: 3px;
     cursor: pointer;
 }
+
+.popular-posts img{
+    width: 45%;
+    height: 60px;
+    object-fit: cover;
+}
+.popular-posts span{
+    font-size:0.8rem;
+}
+
+.popular-single-post{
+    background-color: #d4d3d338;
+    padding: 5px;
+    padding-right: 2px;
+    text-align: justify;
+    border-radius: 5px;
+}
+
