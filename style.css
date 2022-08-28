@@ -20,8 +20,12 @@ nav img {
     border-radius: 50%;
     margin-left: 10px;
 }
+
+
 .recent-header {
-    color: #262626;
+    color: #3b3b3bb6;
+    width: 90%;
+    margin-top: 5%;
 }
 
 main {
@@ -36,7 +40,7 @@ main {
 
 .side-bar {
     width: 25%;
-    height: 80vh;
+    height: 100vh;
     overflow-y: auto;
 }
 
@@ -63,9 +67,18 @@ main {
 
 }
 article{
-    background-color: #c2e7ff71;
+    background-color: #d8ebf85e;
     margin-bottom: 30px;
-    border-left: 4px solid #2980a36c;
+    border-left: 4px solid #052a386c;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    left: 0;
+    transition: left 0.8s;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+article:hover{
+    left: -40px;
 }
 
 article img {
@@ -73,9 +86,8 @@ article img {
     height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    padding: 4px;
-    background-image: linear-gradient(rgb(221, 219, 219), rgb(31, 30, 30));
-    border: 2px solid rgb(209, 209, 209);
+    padding: 1px;
+    border: 2px solid #bfc0c07a;
     position: relative;
     top: -35px;
 }
