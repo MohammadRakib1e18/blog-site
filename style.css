@@ -24,7 +24,7 @@ nav img {
 
 main {
     width: 90%;
-    background-color: rgba(0, 0, 0, 0.068);
+    background-color: #ebedf0a1;
 }
 
 .post-bar {
@@ -43,11 +43,11 @@ article img {
     height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    padding:4px;
+    padding: 4px;
     background-image: linear-gradient(rgb(221, 219, 219), rgb(31, 30, 30));
-    border:2px solid rgb(209, 209, 209);
+    border: 2px solid rgb(209, 209, 209);
     position: relative;
-    top:-30px;
+    top: -30px;
 }
 
 .read-more-icons {
@@ -58,4 +58,13 @@ article img {
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(44, 43, 43, 0.164);
+}
+
+.tags span {
+    display: inline-block;
+    border: 1px solid rgb(194, 191, 191);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3px;
+    cursor: pointer;
 }
