@@ -12,8 +12,6 @@ nav {
         rgb(0, 0, 0)
     );
     border-bottom: 2px solid rgb(190, 191, 192);
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
 }
 nav img {
     width: 50px;
@@ -42,6 +40,9 @@ main {
     overflow-y: auto;
 }
 
+.side-bar form{
+    margin-top: -25px;
+}
 
 .side-bar form input{
     padding-left: 30px;
@@ -61,6 +62,11 @@ main {
     padding-bottom: 11px;
 
 }
+article{
+    background-color: #c2e7ff71;
+    margin-bottom: 30px;
+    border-left: 4px solid #2980a36c;
+}
 
 article img {
     width: 160px;
@@ -71,7 +77,7 @@ article img {
     background-image: linear-gradient(rgb(221, 219, 219), rgb(31, 30, 30));
     border: 2px solid rgb(209, 209, 209);
     position: relative;
-    top: -30px;
+    top: -35px;
 }
 
 .read-more-icons {
@@ -110,3 +116,16 @@ article img {
     border-radius: 5px;
 }
 
+
+.pagination-ul a{
+    padding: 5px 13px;
+    margin: 0 10px;
+    border: 1px solid rgb(163, 162, 162);
+    border-radius: 50%;
+    color: rgb(36, 186, 212);
+}
+ .pagination-ul a:hover, #active{
+    background-color: rgb(36, 186, 212);
+    color: rgb(255, 255, 255);
+    border: 1px solid transparent;
+}
