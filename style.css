@@ -22,19 +22,40 @@ nav img {
     color: #262626;
 }
 
-main{
+main {
     width: 90%;
-    background-color: gainsboro;
+    background-color: rgba(0, 0, 0, 0.068);
 }
 
-.post-bar{
+.post-bar {
     width: 75%;
     border-right: 2px solid gray;
 }
-.side-bar{
+
+.side-bar {
     width: 25%;
+    height: 100vh;
+    overflow-y: auto;
 }
 
-.read-more-icons{
+article img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding:4px;
+    background-image: linear-gradient(rgb(221, 219, 219), rgb(31, 30, 30));
+    border:2px solid rgb(209, 209, 209);
+    position: relative;
+    top:-30px;
+}
+
+.read-more-icons {
     margin-bottom: 3px;
+}
+
+.catagories li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(44, 43, 43, 0.164);
 }
