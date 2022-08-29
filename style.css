@@ -27,6 +27,41 @@ nav img {
     margin-left: 10px;
 }
 
+/* carousel  */
+.carousel{
+    width:95%;
+    
+}
+.carousel-inner{
+    border: 4px solid rgb(68, 67, 67);
+}
+.carousel-item{
+    background-color: black;
+}
+
+.carousel-item img{
+    width:100%;
+    height:80vh;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.carousel-item button{
+    background-image: linear-gradient(135deg, rgb(8, 17, 99), rgb(63, 74, 228));
+    border: 0;
+}
+
+.carousel-caption{
+    bottom:32%;
+}
+
+.stand img{
+    mix-blend-mode:multiply;
+    position: relative;
+    width: 15%;
+    top: -25px;
+}
+
 .recent-header {
     color: #3b3b3bb6;
     width: 90%;
@@ -84,7 +119,7 @@ article {
         rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 article:hover {
-    left: -40px;
+    left: -20px;
 }
 
 article img {
