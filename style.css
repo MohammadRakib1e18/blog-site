@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
 body {
     margin: 0;
     border: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Merriweather", serif;
 }
 nav {
     background-image: linear-gradient(
@@ -21,11 +27,11 @@ nav img {
     margin-left: 10px;
 }
 
-
 .recent-header {
     color: #3b3b3bb6;
     width: 90%;
     margin-top: 5%;
+    font-family: "Merriweather", serif;
 }
 
 main {
@@ -34,25 +40,25 @@ main {
 }
 
 .post-bar {
-    width: 75%;
+    width: 74%;
     border-right: 2px solid gray;
 }
 
 .side-bar {
-    width: 25%;
+    width: 26%;
     height: 100vh;
     overflow-y: auto;
 }
 
-.side-bar form{
+.side-bar form {
     margin-top: -25px;
 }
 
-.side-bar form input{
+.side-bar form input {
     padding-left: 30px;
 }
 
-.side-bar form input::placeholder{
+.side-bar form input::placeholder {
     color: rgb(153, 152, 152);
     font-weight: 500;
     letter-spacing: 2px;
@@ -61,12 +67,11 @@ main {
 }
 .search-icon {
     position: sticky;
-    top:60px;
+    top: 60px;
     padding-top: 11px;
     padding-bottom: 11px;
-
 }
-article{
+article {
     background-color: #d8ebf85e;
     margin-bottom: 30px;
     border-left: 4px solid #052a386c;
@@ -74,10 +79,11 @@ article{
     border-bottom-right-radius: 5px;
     position: relative;
     left: 0;
-    transition: left 0.8s;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    transition: left 0.3s;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
-article:hover{
+article:hover {
     left: -40px;
 }
 
@@ -92,35 +98,67 @@ article img {
     top: -35px;
 }
 
-.read-more-icons {
+.post-title {
+    font-family: "Lora", serif;
+}
+
+.read-more{
+    letter-spacing: 1px;
+}
+.read-more i {
     margin-bottom: 3px;
 }
 
-.catagories li, .popular-single-post{
+.catagories li,
+.popular-single-post {
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(44, 43, 43, 0.164);
 }
 
+.catagories li {
+    color: rgba(7, 59, 119, 0.911);
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.9rem;
+}
+.catagory-count {
+    color: rgba(196, 194, 194, 0.788);
+}
+
+.catagories li:hover {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border-bottom: 1px solid rgba(7, 59, 119, 0.397);
+}
+.catagories li:hover .catagory-count {
+    color: rgba(7, 59, 119, 0.911);
+}
+
 .tags span {
     display: inline-block;
-    border: 1px solid rgb(194, 191, 191);
+    border: 2px solid rgb(233, 231, 231);
     padding: 4px;
     margin: 3px;
     border-radius: 3px;
     cursor: pointer;
+    font-size: 0.9rem;
+}
+.tags span:hover {
+    color: #2987a3;
+    border: 2px solid #2987a3;
 }
 
-.popular-posts img{
+.popular-posts img {
     width: 45%;
     height: 60px;
     object-fit: cover;
 }
-.popular-posts span{
-    font-size:0.8rem;
+.popular-posts span {
+    font-size: 0.8rem;
 }
 
-.popular-single-post{
+.popular-single-post {
     background-color: #d4d3d338;
     padding: 5px;
     padding-right: 2px;
@@ -128,16 +166,20 @@ article img {
     border-radius: 5px;
 }
 
-
-.pagination-ul a{
+.pagination-ul a {
     padding: 5px 13px;
     margin: 0 10px;
     border: 1px solid rgb(163, 162, 162);
     border-radius: 50%;
     color: rgb(36, 186, 212);
 }
- .pagination-ul a:hover, #active{
+.pagination-ul a:hover,
+#active {
     background-color: rgb(36, 186, 212);
     color: rgb(255, 255, 255);
     border: 1px solid transparent;
+}
+
+small{
+    font-size: 0.8rem;
 }
