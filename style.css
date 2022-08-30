@@ -151,8 +151,10 @@ article img {
     letter-spacing: 1px;
 }
 .read-more i {
-    margin-bottom: 3px;
+    position: relative;
+    bottom: -1px;
 }
+
 
 .catagories li,
 .popular-single-post {
