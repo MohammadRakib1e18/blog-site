@@ -1,5 +1,3 @@
-
-
 let addToModal = (mainPost) => {
     let img = mainPost.querySelector("img").getAttribute("src");
 
@@ -23,30 +21,31 @@ let addToModal = (mainPost) => {
     `;
 };
 
-
-let bindEventListener = post => {
+let bindEventListener = (post) => {
     let readMoreButtons = document.getElementsByClassName("read-more");
 
     for (let readMore of readMoreButtons) {
         readMore.setAttribute("data-bs-toggle", "modal");
         readMore.setAttribute("data-bs-target", "#exampleModal");
-    
+
         readMore.addEventListener("click", function (event) {
             event.preventDefault();
-    
+
             let postDescription = this.parentNode;
             let mainPost = postDescription.parentNode;
-    
+
             addToModal(mainPost);
         });
     }
-}
+};
 
 fetch("./postInfoData.JSON")
     .then((res) => res.json())
-    .then((data) => {displayPost(data), displayPopularPost(data)});
+    .then((data) => {
+        displayPost(data), displayPopularPost(data);
+    });
 
-let displayPost = postCollection => {
+let displayPost = (postCollection) => {
     for (post of postCollection) {
         let postBar = document.getElementById("post-bar");
         let article = document.createElement("article");
@@ -80,15 +79,19 @@ let displayPost = postCollection => {
     bindEventListener();
 };
 
-let displayPopularPost = postCollection => {
-    let popularPostContainer = document.getElementById('popular-posts');
+let displayPopularPost = (postCollection) => {
+    let popularPostContainer = document.getElementById("popular-posts");
+
+    postCollection = getPopularPosts(postCollection);
+    console.log(postCollection);
 
     let len = Math.min(postCollection.length, 4);
-    for(let i=0; i<len; i++){
+    for (let i = 0; i < len; i++) {
         let singlePost = postCollection[i];
-        let popularPost = document.createElement('div');
+        let popularPost = document.createElement("div");
 
-        popularPost.className='popular-single-post d-flex  gap-2 text-secondary';
+        popularPost.className =
+            "popular-single-post d-flex  gap-2 text-secondary";
         popularPost.innerHTML = `
             <div class="w-50">
                 <img src="${singlePost.img}" class="img-fluid w-100" alt=""/>
@@ -102,7 +105,14 @@ let displayPopularPost = postCollection => {
                     ${singlePost.date}
                 </span>
             </div>
-        `
+        `;
         popularPostContainer.appendChild(popularPost);
     }
-}
+};
+
+// sort the posts by COMMENTS
+let getPopularPosts = (postCollection) => {
+    return postCollection.sort(function (a, b) {
+        return b.comments - a.comments;
+    });
+};

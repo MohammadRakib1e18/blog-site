@@ -1,38 +1,29 @@
 [
     {
-        "id":1,
-        "title":"Best programming language for CP",
-        "img":"images/programming-languages-2.webp",
+        "id": 1,
+        "title": "Best programming language for CP",
+        "img": "images/programming-languages-2.webp",
         "details": "There are hundreds of programming language. Every language has its own pros and cons; has special features. But if we talk about <span class='text-info'>CP(competitive programming)</span>, C++ will be the first choice. It helps to design efficient codes. Besides, <span class='text-info'>STL</span> is the most attractive feature of C++.",
-        "tag":"problem solving",
-        "date":"Aug 31, 2022",
-        "comments": 5
+        "tag": "problem solving",
+        "date": "Aug 31, 2022",
+        "comments": 25
     },
     {
-        "id":2,
-        "title":"Codeforces - the best CP site",
-        "img":"images/slider/Curious-Alien.png",
-        "details": "There are hundreds of programming language. Every language has its own pros and cons; has special features. But if we talk about <span class='text-info'>CP(competitive programming)</span>, C++ will be the first choice. It helps to design efficient codes. Besides, <span class='text-info'>STL</span> is the most attractive feature of C++.",
-        "tag":"problem solving",
-        "date":"Aug 31, 2022",
-        "comments": 3
+        "id": 5,
+        "title": "Explore the Nature!",
+        "img": "https://static.toiimg.com/photo/67382132.cms",
+        "details": "IRCTC has come up with yet another exciting offer for travellers. Indian Railways has come up with an outbound package for tourists keen to travel to Thailand from Delhi. The said package is for the duration 4 nights and 5 days, with 2 nights’ stay in both <a href='https://timesofindia.indiatimes.com/travel/Bangkok/travel-guide/cs35618542.cms' target='_blank' class='text-info text-decoration-none'>Bangkok</a> and Pattaya.",
+        "tag": "travel",
+        "date": "Aug 31, 2022",
+        "comments": 78
     },
     {
-        "id":3,
-        "title":"Leetcode - get prepared for coding interview!",
-        "img":"images/slider/leetcode.png",
-        "details": "There are hundreds of programming language. Every language has its own pros and cons; has special features. But if we talk about <span class='text-info'>CP(competitive programming)</span>, C++ will be the first choice. It helps to design efficient codes. Besides, <span class='text-info'>STL</span> is the most attractive feature of C++.",
-        "tag":"problem solving",
-        "date":"Aug 31, 2022",
-        "comments": 12
-    },
-    {
-        "id":4,
-        "title":"AtCoder - Another CP site!",
-        "img":"images/slider/AtCoder.png",
-        "details": "There are hundreds of programming language. Every language has its own pros and cons; has special features. But if we talk about <span class='text-info'>CP(competitive programming)</span>, C++ will be the first choice. It helps to design efficient codes. Besides, <span class='text-info'>STL</span> is the most attractive feature of C++.",
-        "tag":"problem solving",
-        "date":"Aug 31, 2022",
-        "comments": 8
+        "id": 6,
+        "title": "Leetcode - Get prepared for your next Coding Interview",
+        "img": "https://assets.leetcode.com/users/images/49da57b2-35ce-4920-af35-7b89d3f8c8e2_1602698125.710262.png",
+        "details": "Letcode is one of the best problem-solving site. If you want to make yourself prepared for your next coding interview, <a href='https://leetcode.com/' target='_blank' class='text-info text-decoration-none'>leetcode</a> is for you.",
+        "tag": "IT-World",
+        "date": "Sep 01, 2022",
+        "comments": 56
     }
 ]
