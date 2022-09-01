@@ -1,3 +1,5 @@
+let postCollection;
+
 let addToModal = (mainPost) => {
     let img = mainPost.querySelector("img").getAttribute("src");
 
@@ -42,12 +44,18 @@ let bindEventListener = (post) => {
 fetch("./postInfoData.JSON")
     .then((res) => res.json())
     .then((data) => {
-        displayPost(data), displayPopularPost(data);
+        (postCollection = data), displayPost(), displayPopularPost();
     });
 
-let displayPost = (postCollection) => {
-    for (post of postCollection) {
-        let postBar = document.getElementById("post-bar");
+let displayPost = (page = 1) => {
+    let startIndex = (page - 1) * 2;
+    let len = postCollection.length;
+
+    let postBar = document.getElementById("post-bar");
+    postBar.innerHTML = "";
+    for (let i = startIndex, j = 0; i < len && j < 2; i++, j++) {
+        let post = postCollection[i];
+
         let article = document.createElement("article");
 
         article.className = "gap-3 p-3 me-2";
@@ -79,15 +87,14 @@ let displayPost = (postCollection) => {
     bindEventListener();
 };
 
-let displayPopularPost = (postCollection) => {
+let displayPopularPost = () => {
     let popularPostContainer = document.getElementById("popular-posts");
 
-    postCollection = getPopularPosts(postCollection);
-    console.log(postCollection);
+    posts = getPopularPosts([...postCollection]);
 
-    let len = Math.min(postCollection.length, 4);
+    let len = Math.min(posts.length, 4);
     for (let i = 0; i < len; i++) {
-        let singlePost = postCollection[i];
+        let singlePost = posts[i];
         let popularPost = document.createElement("div");
 
         popularPost.className =
@@ -104,6 +111,11 @@ let displayPopularPost = (postCollection) => {
                     ><i class="fas fa-calendar-alt me-1"></i>
                     ${singlePost.date}
                 </span>
+                <br>
+                <span
+                    ><i class="fas fa-comments"></i>
+                    ${singlePost.comments} comments
+                </span>
             </div>
         `;
         popularPostContainer.appendChild(popularPost);
@@ -111,8 +123,34 @@ let displayPopularPost = (postCollection) => {
 };
 
 // sort the posts by COMMENTS
-let getPopularPosts = (postCollection) => {
-    return postCollection.sort(function (a, b) {
+let getPopularPosts = (posts) => {
+    return posts.sort(function (a, b) {
         return b.comments - a.comments;
     });
 };
+
+// works with pagination
+document
+    .getElementById("pagination-ul")
+    .addEventListener("click", function (event) {
+        event.preventDefault();
+
+        let allPaginationButtons =
+            document.getElementById("pagination-ul").children;
+
+        if (event.target.getAttribute("id") !== "pagination-ul") {
+            // remove active style
+            for (let paginationButton of allPaginationButtons) {
+                paginationButton.removeAttribute("id");
+            }
+
+            event.target.setAttribute("id", "active");
+        }
+
+        let page = event.target.innerText;
+        if (page == "<") page = 1;
+        // first page
+        else if (page == ">") page = 5; // last page
+
+        displayPost(parseInt(page));
+    });
